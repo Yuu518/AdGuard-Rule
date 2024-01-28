@@ -40,8 +40,8 @@ jobs:
           else
             echo "status=success" >> $GITHUB_OUTPUT
             git add .
-            git config --local user.email "${{variables.MAIL}}"
-            git config --local user.name "${{variables.NAME}}"
+            git config --local user.email "${{vars.MAIL}}"
+            git config --local user.name "${{vars.NAME}}"
             git commit -m "CI Updated at $(date +'%Y-%m-%d %H:%M:%S')" -a
           fi
 
